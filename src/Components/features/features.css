@@ -1,0 +1,29 @@
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
+    z-index: 1;
+
+}
+.featuresItem{
+    position: relative;
+    color: white; 
+    border-radius: 10px ;
+    overflow: hidden;
+    height: 250px;
+}
+.featuresImg{
+    width: 100%;
+    max-width: 1024px;
+    object-fit: cover;
+    
+}
+.featuresTitle{
+    position: absolute;
+    bottom: 20px;
+    left: 45px;
+    
+}
