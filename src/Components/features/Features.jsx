@@ -1,37 +1,47 @@
-import React from 'react';
+import useFetch from "../../hooks/useFetch";
 import "./features.css";
 
 const Features = () => {
+  const {data,loading,error}=useFetch("/hotels/countByCity?cities=Lahore,Skardu,Rawalpindi, islamabad,Karachi")
+ // console.log(data);
+ 
   return (
     <div className='features'>
+     {loading?
+     (
+      "loading please wait"
+      ):
+     ( <>
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://q-xx.bstatic.com/xdata/images/xphoto/300x240/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1439130490301-25e322d88054?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGhvdGVsJTIwZnJvbnQlMjBzaWRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alter="imgage"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">Sarena Hotel</h1>
+        <h2 className="saimDsc">{data[0]}</h2>
         </div>
       </div>  
      </div> 
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://r-xx.bstatic.com/xdata/images/hotel/300x240/119467716.jpeg?k=f3c2c6271ab71513e044e48dfde378fcd6bb80cb893e39b9b78b33a60c0131c9&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1542372041-620dfb05997c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsJTIwZnJvbnQlMjBzaWRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alter="imgage"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">k-2 Hotel</h1>
+        <h2 className="saimDsc">{data[1]}</h2>
         </div>
       </div>  
      </div> 
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://q-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1615460549969-36fa19521a4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alter="imgage"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">PC Hotel</h1>
+        <h2 className="saimDsc"> {data[2]}</h2>
         </div>
       </div>  
-     </div> 
-      
+     </div>
+     </>
+      ) 
+    } 
     </div>
   )
 }

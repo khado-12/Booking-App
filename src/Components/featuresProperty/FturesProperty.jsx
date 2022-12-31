@@ -1,42 +1,35 @@
-import React from 'react';
-import './FturesProperty.css'
-const FturesProperty = () => {
+import useFetch from "../../hooks/useFetch";
+import "./FturesProperty.css";
+
+const FturesProperties = () => {
+  const { data, loading, error } = useFetch("/hotels?featured=true&limit=4");
+
   return (
-    <div className='fpList'>
-      <div className="fpItem">
-        <img src="https://q-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=" alt="" className="fpimg" />
-        <span className="fpName">K-2</span>
-        <span className="fpCity">Skardu</span>
-        <span className="fpPrice"> Starting from 200$</span>
-        <div className="fpRating">
-            <button>8.90</button>
-            <span className="fpComment">Excellent</span>
-        </div>
-      </div>
-      <div className="fpItem">
-        <img src="https://q-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=" alt="" className="fpimg" />
-        <span className="fpName">K-2</span>
-        <span className="fpCity">Skardu</span>
-        <span className="fpPrice"> Starting from 200$</span>
-        <div className="fpRating">
-            <button>8.90</button>
-            <span className="fpComment">Excellent</span>
-        </div>
-      </div>
-      <div className="fpItem">
-        <img src="https://q-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=" alt="" className="fpimg" />
-        <span className="fpName">K-2</span>
-        <span className="fpCity">Skardu</span>
-        <span className="fpPrice"> Starting from 200$</span>
-        <div className="fpRating">
-            <button>8.90</button>
-            <span className="fpComment">Excellent</span>
-        </div>
-      </div>
-      
-    
+    <div className="fp">
+      {loading ? (
+        "Loading"
+      ) : (
+        <>
+          {data.map((item) => (
+            <div className="fpItem" key={item._id}>
+              <img
+                src={item.photos[0]}
+                alt=""
+                className="fpImg"
+              />
+              <span className="fpName">{item.name}</span>
+              <span className="fpCity">{item.city}</span>
+              <span className="fpPrice">Starting from ${item.cheapestPrice}</span>
+              {item.rating && <div className="fpRating">
+                <button>{item.rating}</button>
+                <span>Excellent</span>
+              </div>}
+            </div>
+          ))}
+        </>
+      )}
     </div>
   );
-}
+};
 
-export default FturesProperty;
+export default FturesProperties;
