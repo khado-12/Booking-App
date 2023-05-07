@@ -6,28 +6,25 @@ const Features = () => {
     <div className='features'>
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://q-xx.bstatic.com/xdata/images/xphoto/300x240/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1603998594199-804ec60de289?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aXNsYW1hYmFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alter="imgage"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">Islamabad</h1>
         </div>
       </div>  
      </div> 
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://r-xx.bstatic.com/xdata/images/hotel/300x240/119467716.jpeg?k=f3c2c6271ab71513e044e48dfde378fcd6bb80cb893e39b9b78b33a60c0131c9&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1566707599210-af1afa6c7c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhaG9yZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' alter="imgage"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">Lahore</h1>
         </div>
       </div>  
      </div> 
      <div className="featuresItem">
       <div className="featuresImg">
-        <img src='https://q-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=' alter="imgage"/>
+        <img src='https://images.unsplash.com/photo-1584043204475-8cc101d6c77a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGlzbGFtYWJhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' alter="image"/>
         <div className="featuresTitle">
-        <h1 className="saim">Saim Hotel</h1>
-        <h2 className="saimDsc">Saim desc</h2>
+        <h1 className="saim">Skardu</h1>
         </div>
       </div>  
      </div> 
