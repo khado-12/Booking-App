@@ -41,7 +41,7 @@ const Footer = () => {
                
             </ul>
         </div>
-        <div className="fText"><h4>Copyright@ Saimbooking.com</h4></div>
+        <div className="fText"><h4>Copyright@ HoneyBooking.com</h4></div>
       
     </div>
   )
